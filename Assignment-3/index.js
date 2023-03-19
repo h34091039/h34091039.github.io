@@ -25,6 +25,7 @@ function findPosition(numbers,target)
     return (index==numbers.length) ? -1 : index;
 }
 
+
 console.log(max([1,2,4,5]));
 console.log(max([5,2,7,1,6]));
 
