@@ -24,10 +24,7 @@ function groupByKey(input)
             result[index.key] = (input[i].key===index.key) ? result[index.key]+index.value : result[index.key]
         ))
     } 
-
-    return result
-    
-    
+    return result 
 }
 
 let input2 = [

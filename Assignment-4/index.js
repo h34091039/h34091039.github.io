@@ -1,8 +1,8 @@
-function avg(data)
-{  
-    
-    const sum = Object.values(data.products).map(item => item.price).reduce((acc, cur)=>{return acc+cur})
-    return sum/data.size
+function avg(data) {
+    const sum = Object.values(data.products)
+        .map(item => item.price)
+        .reduce((acc, cur) => { return acc + cur })
+    return sum / data.size
 }
 
 console.log(
