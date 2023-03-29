@@ -9,26 +9,27 @@
 </head>
 
 <style>
-    #aaa {
+    #title {
         display: flex;
         justify-content: space-between;
-        background-color: brown;
+        background-color: rgb(124, 182, 211);
+        padding: 10px;
     }
 
-    #bbb {
+    #items {
         display: flex;
         justify-content: space-around;
         width: 500px;
     }
 
-    #ccc {
+    #welcome {
         display: flex;
         justify-content: center;
-        padding: 100px;
+        padding: 70px;
         background-color: aqua;
     }
 
-    #ddd {
+    #section {
         display: flex;
         justify-content: center;
         padding: 10px;
@@ -39,15 +40,15 @@
         margin: 0px;
     }
 
-    .eee {
+    .contents {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        background-color: brown;
+        background-color: rgb(243, 238, 238);
 
     }
 
-    .fff {
+    .content {
         background-color: aquamarine;
         margin: 10px 100px 10px 100px;
         padding: 50px 100px 50px 100px;
@@ -55,17 +56,18 @@
 
     #calltoaction{
         display: flex;
-        flex-wrap: wrap;
+        margin: 10px 500px 10px 500px;
         justify-content: center;
         background-color: aquamarine;
+        
     }
 </style>
 
 
 <body>
-    <div id="aaa">
+    <div id="title">
         <div>Website Title/Logo</div>
-        <div id="bbb">
+        <div id="items">
             <div>Item 1</div>
             <div>Item 2</div>
             <div>Item 3</div>
@@ -73,25 +75,41 @@
         </div>
     </div>
 
-    <div id="ccc">
+    <div id="welcome">
+        <script>
+            document.getElementById("welcome").addEventListener("click", function(){
+                document.getElementById("welcome").innerHTML = "<h1>Have a good time<h1>";
+            });
+            
+        </script>
         <h1>Welcome Message</h1>
     </div>
-    <div id="ddd">
+    <div id="section">
         <h2>section title</h2>
     </div>
 
-    <div class="eee">
-        <div class="fff"> content box</div>
-
-        <div class="fff"> content box</div>
-
-        <div class="fff"> content box</div>
-
-        <div class="fff"> content box</div>
+    <div class="contents">
+        <div class="content"> content box</div>
+        <div class="content"> content box</div>
+        <div class="content"> content box</div>
+        <div class="content"> content box</div>
 
     </div>
 
     <div id="calltoaction">
+        <script>
+             document.getElementById("calltoaction").addEventListener("click", function(){
+                var em = []
+                for (var i = 0 ; i < 4 ; i++)
+                {
+                    em.push(document.createElement('em')); 
+                    em[i].textContent = "content box";
+                    em[i].setAttribute('class', 'content');
+                    document.querySelector('.contents').appendChild(em[i]);
+                }
+            });
+
+        </script>
         call to action
     </div>
 
